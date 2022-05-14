@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header, .main, .footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.logo, .footerLogo{
+    padding: 20px;
+}
+
+.header{
+    background-color: #005792;
+}
+
+.navMenu{
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.navOp{
+    padding: 0 1rem;
+}
+
+.footer{
+    background-color: #3e4a61;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 480px){
+    .nav{
+        display: none;
+    }
+}
