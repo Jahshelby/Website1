@@ -9,12 +9,15 @@
     width: 100%;
 }
 
-.logo, .footerLogo{
-    padding: 20px;
+
+
+.logo, .footerLogo, .nav{
+    padding: 1rem;
 }
 
 .header{
     background-color: #005792;
+    justify-content: space-between;
 }
 
 .navMenu{
@@ -25,7 +28,7 @@
 }
 
 .navOp{
-    padding: 0 1rem;
+    padding: 0 2rem;
 }
 
 .footer{
