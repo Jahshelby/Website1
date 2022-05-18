@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.header, .main, .footer{
+ .main, .footer{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -19,16 +19,33 @@
     background-color: #005792;
     justify-content: space-between;
 }
-
-.navMenu{
-    list-style: none;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
+.sidebar{
+    position: fixed;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #3e4a61;
 }
 
-.navOp{
-    padding: 0 2rem;
+.sidebar header{
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: black;
+    user-select: none;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+    font-size: 22px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+
 }
 
 .footer{
