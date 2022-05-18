@@ -17,6 +17,13 @@
     background-color: #005792;
     justify-content: space-between;
 }
+
+.navMenu{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
 .sidebar{
     position: fixed;
     left: 0;
@@ -25,7 +32,7 @@
     background-color: #3e4a61;
 }
 
-.sidebar header{
+.sideLogo{
     font-size: 24px;
     color: white;
     text-align: center;
