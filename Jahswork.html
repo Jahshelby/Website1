@@ -24,14 +24,25 @@
             </ul>
         </div>
     </div>
-
    <main class="content">
        <h1 class="Welcome">Welcome</h1>
        <p>Mauris bibendum, libero eget accumsan mollis, elit massa dapibus diam, id imperdiet massa urna sed enim. Phasellus in leo erat. </p>
+
+
+
+
+
+
+       <script>
+           const menu_toggle = document.querySelector('.menu-toggle');
+       const sidebar = document.querySelector('.sidebar');
+
+       menu_toggle.addEventListener('click', () => {
+           menu_toggle.classList.toggle('is-active');
+           sidebar.classList.toggle('is-active');
+       })
+       </script>
    </main>
-
-   <script src="/brain.js"></script>
-
 
 
     <div class="footer">
