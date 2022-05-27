@@ -3,6 +3,9 @@
     padding: 0;
 }
 
+
+
+
  .main, .footer{
     display: flex;
     flex-direction: row;
@@ -16,6 +19,7 @@
 .header{
     background-color: #005792;
     justify-content: space-between;
+    text-align: center;
 }
 
 .navMenu{
@@ -25,33 +29,114 @@
 }
 
 .sidebar{
+    flex: 1 1 0;
     position: fixed;
     left: 0;
-    width: 200px;
+    max-width: 200px;
     height: 100%;
+    padding: 2rem 1rem;
     background-color: #3e4a61;
 }
+
 
 .sideLogo{
     font-size: 24px;
     color: white;
     text-align: center;
     line-height: 70px;
-    background: black;
+    background: gray;
     user-select: none;
 }
 
 .sidebar ul a{
     display: block;
-    height: 100%;
-    width: 100%;
-    line-height: 50px;
-    font-size: 22px;
-    color: white;
-    padding-left: 40px;
-    box-sizing: border-box;
-
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s linear;
 }
+
+.sidebar ul a:hover,
+.sidebar ul a.is-active{
+    color: black;
+    border-right: 5px solid black;
+}
+
+.content {
+    flex: 1 1 0;
+    padding: 2rem;
+}
+
+.content h1{
+    color: #3C3F58;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.content p{
+    color: #707793;
+}
+.menu-toggle{
+    display: none;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 99px;
+    background-color: #2e3047;
+    cursor: pointer;
+}
+
+.hamburger{
+    position: relative;
+    top: calc(50% - 2px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+}
+
+.hamburger > span,
+.hamburger > span::before,
+.hamburger > span::after{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+    transition-duration: .25s;
+}
+.hamburger > span::before{
+    content: " ";
+    top: -8px;
+}
+
+.hamburger > span::after{
+    content: " ";
+    top: 8px;
+}
+
+.menu-toggle .is-active .hamburger > span{
+    transform: rotate(45deg);
+}
+.menu-toggle .is-active .hamburger > span::before{
+    top: 0;
+    transform: rotate(0deg);
+}
+.menu-toggle .is-active .hamburger > span::after{
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.welcome{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
 
 .footer{
     background-color: #3e4a61;
@@ -60,8 +145,49 @@
     width: 100%;
 }
 
-@media screen and (max-width: 480px){
-    .nav{
-        display: none;
+@media screen and (max-width: 1024px){
+    .sidebar{
+        max-width: 200px;
     }
 }
+
+@media  (max-width: 768px){
+    .menu-toggle{
+        display: block;
+    }
+    .content{
+        padding-top: 8rem;
+    }
+    .sidebar{
+        position: flex;
+        top: 0;
+        left: -300px;
+        height: 100vh;
+        width: 100%;
+        max-width: 300px;
+        transition: 0.2s linear;
+    }
+
+    .sidebar .is-active{
+        left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
