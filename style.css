@@ -14,6 +14,7 @@
 
 .logo, .footerLogo, .nav{
     padding: 1rem;
+    position: absolute;
 }
 
 .header{
@@ -141,6 +142,7 @@
 h2{
     text-align: center;
     font-size: 1rem;
+
 }
 
 
@@ -189,16 +191,21 @@ h2{
 p{
     display:inline-block;
     width:20%;
-    margin:5% auto;
+    margin:20px;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding:1em;
     line-height:1.5em;
     background: #fff (67, 95%, 95%, 1);
   }
-  #one {
+  #one{
     border:solid 5px hsl(0, 95%, 35%, 1);
   }
-
+  #two{
+    border:solid 5px hsl(0, 95%, 35%, 1);
+  }
+  #three{
+    border:solid 5px hsl(0, 95%, 35%, 1);
+  }
 
 
 
