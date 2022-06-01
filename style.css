@@ -3,13 +3,14 @@
     padding: 0;
 }
 
-
-
-
- .main, .footer{
+.main{
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-direction: column;
+    width: 82%;
+    align-self: center;
+    margin-left: 200px;
+    padding: 0 10px;
+
 }
 
 .logo, .footerLogo, .nav{
@@ -38,9 +39,11 @@
     flex: 1 1 0;
     position: fixed;
     left: 0;
+    top: 0;
     max-width: 200px;
     height: 100%;
     padding: 2rem 1rem;
+    z-index: 1;
     background-color: #3e4a61;
 }
 
@@ -153,13 +156,42 @@ h2{
     width: 100px;
 }
 
-@media screen and (max-width: 1024px){
+
+
+
+.speech_bubbles{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align:center;
+}
+
+/* p{
+    display:inline-block;
+    width:20%;
+    margin:20px;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding:1em;
+    line-height:1.5em;
+    background: #fff (67, 95%, 95%, 1);
+  } */
+  .box{
+    border:solid 5px hsl(0, 95%, 35%, 1);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+
+  }
+
+  @media screen and (max-width: 1024px){
     .sidebar{
         max-width: 200px;
     }
 }
 
 @media  (max-width: 768px){
+    .main{
+        margin: 10px;
+    }
     .menu-toggle{
         display: block;
     }
@@ -179,33 +211,13 @@ h2{
     .sidebar.is-active{
         left: 0;
     }
+
+    .speech_bubbles{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
 
-
-.speech-bubble{
-    width:100%; 
-  margin-top:5%; 
-  text-align:center;
-}
-
-p{
-    display:inline-block;
-    width:20%;
-    margin:20px;
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    padding:1em;
-    line-height:1.5em;
-    background: #fff (67, 95%, 95%, 1);
-  }
-  #one{
-    border:solid 5px hsl(0, 95%, 35%, 1);
-  }
-  #two{
-    border:solid 5px hsl(0, 95%, 35%, 1);
-  }
-  #three{
-    border:solid 5px hsl(0, 95%, 35%, 1);
-  }
 
 
 
